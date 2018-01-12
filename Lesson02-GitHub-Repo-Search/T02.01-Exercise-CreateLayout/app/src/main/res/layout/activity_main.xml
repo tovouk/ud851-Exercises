@@ -15,15 +15,12 @@
   limitations under the License.
 -->
 
-<!--TODO (1) Change the ConstraintLayout to a LinearLayout-->
-<!--TODO (2) Make the orientation vertical-->
-<!--TODO (3) Give left, right, and top padding of 16dp-->
-<!--TODO (4) Remove the line that declares the id, we don't need it-->
-<!--TODO (5) Remove the xmlns:app declaration, we don't need that anymore-->
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -60,4 +57,4 @@
         <!--TODO (24) Set the height and width to wrap_content-->
         <!--TODO (25) Set the text to something that tells the user to make a search-->
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
