@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -49,11 +50,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onClickOpenAddressButton(View v) {
 
-        String address = "13532 N Central Expy, TX";
+        String address = "13532 N Central Expy, Dallas,TX";
 
         Uri.Builder builder = new Uri.Builder();
-        builder.scheme("geo").path("0,0").query(address);
-
+        builder.scheme("geo").path("0,0").appendQueryParameter("q",address);
         Uri addressUri = builder.build();
         showMap(addressUri);
     }
@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showMap(Uri uri){
+        Log.i("URI: ",uri.toString());
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);
         if(intent.resolveActivity(getPackageManager())!= null){
