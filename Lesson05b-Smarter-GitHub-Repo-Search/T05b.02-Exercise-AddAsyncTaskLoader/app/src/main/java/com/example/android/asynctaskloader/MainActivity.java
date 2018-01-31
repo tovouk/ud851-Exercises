@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method will make the View for the JSON data visible and
      * hide the error message.
      * <p>
-     * Since it is okay to redundantly set the visibility of a View, we don't
+     * Since it is okay to redundantly set the visibility of a View, we don't 
      * need to check whether each view is currently visible or invisible.
      */
     private void showJsonDataView() {
