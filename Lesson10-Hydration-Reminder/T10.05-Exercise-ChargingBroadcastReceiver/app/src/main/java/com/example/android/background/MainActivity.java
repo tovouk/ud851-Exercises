@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onResume();
         registerReceiver(mChargingReceiver,mChargingIntentFilter);
     }
-    
+
     @Override
     protected void onPause(){
         super.onPause();
