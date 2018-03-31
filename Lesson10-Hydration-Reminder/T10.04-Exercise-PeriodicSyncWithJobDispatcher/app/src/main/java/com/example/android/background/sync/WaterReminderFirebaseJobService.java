@@ -32,7 +32,7 @@ public class WaterReminderFirebaseJobService extends JobService{
             protected Object doInBackground(Object[] objects) {
                 Context context = WaterReminderFirebaseJobService.this;
                 ReminderTasks.executeTask(context,ReminderTasks.ACTION_CHARGING_REMINDER);
-
+                return null;
             }
             @Override
             protected void onPostExecute(Object o){
